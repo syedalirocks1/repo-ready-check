@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-ready-check"
+version = "0.1.0"
+description = "Offline, dependency-free open-source repository readiness checks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Repo Ready contributors"}]
+keywords = ["open-source", "repository", "audit", "cli", "github"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Environment :: Console",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+repo-ready = "repo_ready.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
